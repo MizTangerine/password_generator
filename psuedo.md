@@ -9,5 +9,7 @@ verify:
 - uppercase
 - numbers
 - symbols
+
 check to make sure at least 1 critera has been entered
+
 then generate password and display it in the page
