@@ -68,7 +68,7 @@ header {
   clear: both;
 }
 
-.setting {
+.criteria {
   display: flex;
   justify-content: space-between;
   align-items: center;
