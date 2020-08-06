@@ -8,6 +8,8 @@ console.log(lengthEl, uppercaseEl, lowercaseEl, numbersEl, symbolsEl);
 var passwordText = document.querySelector("#password");
 const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const lower = 'abcdefghijklmnopqrstuvwxyz'
+const number = '0123456789'
+const symbol = '!@#$%^&*()'
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -25,6 +27,21 @@ function generatePassword() {
       passwordText.value = 'At lease one criteria must be selected.'
     } else {
       console.log(uppercaseEl.checked, lowercaseEl.checked, numbersEl.checked, symbolsEl.checked)
+      let acceptedLetters = [];
+      let password = ''
+      if (uppercaseEl.checked) {
+        acceptedLetters = acceptedLetters + upper
+      }
+      if (lowercaseEl.checked) {
+        acceptedLetters = acceptedLetters + lower
+      }
+      if (numbersEl.checked) {
+        acceptedLetters = acceptedLetters + number
+      }
+      if (symbolsEl.checked) {
+        acceptedLetters = acceptedLetters + symbol
+      }
+      console.log(acceptedLetters)
     }
 
   }
