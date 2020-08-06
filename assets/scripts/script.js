@@ -42,6 +42,12 @@ function generatePassword() {
         acceptedLetters = acceptedLetters + symbol
       }
       console.log(acceptedLetters)
+      for (i = 0; i < length; i++) {
+        var index = Math.floor(Math.random() * acceptedLetters.length)
+        password += acceptedLetters[index]
+      }
+      passwordText.value = password;
+      return password
     }
 
   }
@@ -52,10 +58,6 @@ function generatePassword() {
 function writePassword() {
   var password = generatePassword();
   console.log(password);
-
-  console.log(passwordText);
-
-  // passwordText.value = password;
 
 }
 
