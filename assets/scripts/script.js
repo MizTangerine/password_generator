@@ -40,12 +40,13 @@ function generatePassword() {
       if (symbolsEl.checked) {
         acceptedLetters = acceptedLetters + symbol
       }
+
       //for loop
       for (i = 0; i < length; i++) {
-        let index = Math.floor(Math.random() * acceptedLetters.length)
-        password += acceptedLetters[index]
-
+        let index = Math.floor(Math.random() * acceptedLetters.length);
+        password += acceptedLetters[index];
       }
+
       passwordText.value = password;
       return password
     }
